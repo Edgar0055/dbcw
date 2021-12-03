@@ -1,0 +1,10 @@
+.sensors {}
+.sensors th.index,
+.sensors th.id,
+.sensors th.enabled { width: 96px; }
+.sensors th.actions { width: 128px; }
+.sensors th.name { width: 256px; }
+.sensors td.index,
+.sensors td.id { text-align: right; }
+.sensors td.enabled [data-enabled="true"] { color: green; }
+.sensors td.enabled [data-enabled="false"] { color: red; }

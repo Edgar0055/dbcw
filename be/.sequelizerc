@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+require('@babel/register');
+
+const path = require('path');
+
+const root = path.resolve(__dirname, 'db', 'sequelize');
+
+module.exports = {
+  'config': path.resolve(root, 'config'),
+  'migrations-path': path.resolve(root, 'migrations'),
+  'models-path': path.resolve(root, 'models'),
+  'seeders-path': path.resolve(root, 'seeds'),
+};

@@ -1,0 +1,11 @@
+.statistic {}
+.statistic td.index,
+.statistic td.id,
+.statistic td.enabled { width: 96px; }
+.statistic th.actions { width: 128px; }
+.statistic td.created,
+.statistic td.name { width: 256px; }
+.statistic td.index,
+.statistic td.id { text-align: right; }
+.statistic td.enabled [data-enabled="true"] { color: green; }
+.statistic td.enabled [data-enabled="false"] { color: red; }

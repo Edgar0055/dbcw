@@ -1,0 +1,25 @@
+version: "3.0"
+
+services:
+  adminer:
+    environment:
+      ADMINER_DEFAULT_SERVER: "postgresql"
+    image: "adminer:4.7.8"
+    links:
+      - "postgresql"
+    restart: "unless-stopped"
+    ports:
+      - "4445:8080"
+  postgresql:
+    environment:
+      POSTGRES_USER: "cw"
+      POSTGRES_PASSWORD: "cw"
+      POSTGRES_DB: "cw"
+      POSTGRES_INITDB_WALDIR: "/data"
+    image: "postgres:12.5"
+    ports:
+      - "4444:5432"
+    restart: "unless-stopped"
+    volumes:
+      - "./data:/data"
+    working_dir: "/data"

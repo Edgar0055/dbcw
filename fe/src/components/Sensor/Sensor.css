@@ -1,0 +1,35 @@
+.sensor {
+	display: grid;
+	grid-template:
+		"detail myd3" auto
+		"neighbors neighbors" auto
+		"statistic statistic" auto / 200px 1fr;
+}
+
+.sensor .view { grid-area: detail; margin: 0 8px 12px 0; }
+.sensor .view {
+	display: inline-block;
+	padding: 6px;
+	border: 1px dotted grey;
+}
+.sensor .view dt { font-weight: bold; }
+.sensor .view dd { }
+
+.sensor .neighbors { grid-area: neighbors; }
+.sensor .neighbors .radius { margin-bottom: 6px; text-align: right; }
+.sensor .neighbors input { width: 8ch; }
+.sensor .neighbors th.index,
+.sensor .neighbors th.id,
+.sensor .neighbors th.enabled { width: 96px; }
+.sensor .neighbors th.actions { width: 128px; }
+.sensor .neighbors th.name { width: 256px; }
+.sensor .neighbors td.index,
+.sensor .neighbors td.id { text-align: right; }
+.sensor .neighbors td.enabled [data-enabled="true"] { color: green; }
+.sensor .neighbors td.enabled [data-enabled="false"] { color: red; }
+
+.sensor .myd3 { grid-area: myd3; margin: 12px 0; }
+.sensor .myd3 .axis { font: 10px sans-serif; }
+.sensor .myd3 .line { fill: none; stroke: steelblue; stroke-width: 2px; }
+
+.sensor .statistic { grid-area: statistic; margin: 12px 0; }
